@@ -1,0 +1,41 @@
+[package]
+name = "chex-explorer"
+version = "0.1.0"
+edition = "2021"
+authors = ["ChexExplorer Team"]
+description = "A robust multi-OS file explorer built with Rust"
+license = "MIT"
+
+[dependencies]
+eframe = "0.29"
+egui = "0.29"
+egui_extras = { version = "0.29", features = ["all_loaders"] }
+egui-winit = "0.29"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["full"] }
+walkdir = "2.5"
+dirs = "5.0"
+chrono = { version = "0.4", features = ["serde"] }
+image = "0.25"
+notify = "6.1"
+trash = "5.0"
+open = "5.3"
+clipboard = "0.5"
+uuid = { version = "1.10", features = ["v4"] }
+rayon = "1.10"
+regex = "1.11"
+zip = "2.2"
+tar = "0.4"
+mime_guess = "2.0"
+filesize = "0.2"
+rfd = "0.15"
+anyhow = "1.0"
+log = "0.4"
+env_logger = "0.11"
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["winuser", "shellapi", "commdlg"] }
+
+[target.'cfg(unix)'.dependencies]
+nix = "0.29"
