@@ -1,118 +1,199 @@
-# DNotepadX - Renaissance Text Editor
+# ChexExplorer - Multi-OS File Explorer
 
-A beautiful, feature-rich text editor built with Rust and egui, featuring renaissance-inspired themes and classical elegance.
+A robust, modern file explorer built with Rust that rivals Windows File Explorer in functionality while providing excellent cross-platform support for Windows, macOS, and Linux.
 
 ![Logo](chexexplorer.png)
 
-## Features
+## 🚀 Features
 
-🎨 **Renaissance-Inspired Themes**
-- Classic Renaissance (warm parchment tones)
-- Dark Renaissance (rich dark wood)
-- Royal Blue (elegant blue palette)
-- Forest Green (natural green tones)
+### Core File Management
+- **Multi-platform support** - Works seamlessly on Windows, macOS, and Linux
+- **Fast file browsing** - Efficient directory navigation with async I/O
+- **Multiple view modes** - List, Grid, and Details views
+- **Real-time updates** - File system watching for automatic refresh
+- **Keyboard shortcuts** - Full keyboard navigation support
 
-📝 **Advanced Text Editing**
-- Line numbers with customizable display
-- Word wrap toggle
-- Find and replace functionality
-- Multiple monospace font options
-- Customizable font sizes
+### Advanced Operations
+- **File operations** - Copy, move, delete, rename with progress tracking
+- **Archive support** - Create and extract ZIP/TAR archives
+- **Search functionality** - Powerful file search with filters
+- **Thumbnail generation** - Image previews and thumbnails
+- **Bookmarks** - Quick access to frequently used locations
+- **Tab support** - Multi-tab interface for better workflow
 
-💾 **File Operations**
-- New, Open, Save, Save As
-- Save As Copy functionality
-- Recent files menu
-- Auto-save capabilities
+### User Experience
+- **Modern UI** - Clean, responsive interface built with egui
+- **Customizable** - Adjustable view options and preferences
+- **Safe operations** - Trash/recycle bin support, confirmation dialogs
+- **Performance** - Optimized for large directories and file operations
 
-⚙️ **Customization**
-- Custom background and text colors
-- Font family selection (Consolas, Courier New, etc.)
-- Adjustable font sizes
-- Theme switching
-- Persistent settings
+## 🛠️ Technology Stack
 
-## System Requirements
+- **Language**: Rust 🦀
+- **GUI Framework**: egui/eframe
+- **Async Runtime**: Tokio
+- **File Operations**: Native Rust with cross-platform compatibility
+- **Image Processing**: image crate for thumbnails
+- **Archive Support**: zip and tar crates
 
-- Windows, macOS, or Linux
-- Rust 1.70+ for building from source
+## 📋 Requirements
 
-## Installation
+- Rust 1.70 or later
+- Operating System: Windows 10+, macOS 10.14+, or Linux with GTK
 
-### Option 1: Build from Source
+## 🚀 Quick Start
+
+### Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/chex-explorer.git
+   cd chex-explorer
+   ```
+
+2. **Build and run**:
+   ```bash
+   cargo run
+   ```
+
+3. **Build for release** (Windows GUI without terminal):
+   ```bash
+   cargo build --release
+   ```
+   
+   The release build is optimized and configured to run as a Windows GUI application without showing a console window.
+
+### Development Setup
 
 1. **Install Rust** (if not already installed):
    ```bash
    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
    ```
 
-2. **Clone and build**:
+2. **Install development dependencies**:
    ```bash
-   git clone <repository-url>
-   cd DNotepadX
-   cargo build --release
+   # On Ubuntu/Debian
+   sudo apt-get install build-essential pkg-config libgtk-3-dev
+
+   # On macOS (using Homebrew)
+   brew install pkg-config
+
+   # On Windows
+   # No additional dependencies required
    ```
 
-3. **Run the application**:
-   ```bash
-   cargo run --release
-   ```
+## 🎯 Usage
 
-### Option 2: Quick Start in Current Directory
+### Basic Navigation
+- **Navigate directories**: Double-click folders or use the address bar
+- **Go back/forward**: Use navigation buttons or Alt+Left/Right
+- **Go up**: Click the up button or press Alt+Up
+- **Refresh**: Press F5 or click the refresh button
 
-If you're already in a Rust project directory:
+### File Operations
+- **Select files**: Click to select, Ctrl+Click for multiple selection
+- **Copy/Cut/Paste**: Use standard Ctrl+C/X/V shortcuts
+- **Delete**: Press Delete key or use context menu
+- **Rename**: Right-click and select rename or press F2
 
-```bash
-cargo run
-```
+### View Options
+- **Change view mode**: Use the toolbar buttons (List/Grid/Details)
+- **Sort files**: Click column headers in Details view
+- **Show hidden files**: Press Ctrl+H or use the toggle button
 
-## Usage
+### Advanced Features
+- **Search**: Use Ctrl+F to open search dialog
+- **Bookmarks**: Add current location to bookmarks for quick access
+- **Archives**: Right-click to create archives or extract existing ones
 
-### Basic Operations
-- **New File**: `File > New` or Ctrl+N
-- **Open File**: `File > Open` or Ctrl+O
-- **Save**: `File > Save` or Ctrl+S
-- **Save As**: `File > Save As` or Ctrl+Shift+S
+## 🔧 Configuration
 
-### Customization
-1. Open `View > Settings` to access the settings panel
-2. Choose from preset themes in `View > Themes`
-3. Customize colors, fonts, and editor options
-4. Settings are automatically saved and restored
+The application stores its configuration in:
+- **Windows**: `%APPDATA%\chex-explorer\`
+- **macOS**: `~/Library/Application Support/chex-explorer/`
+- **Linux**: `~/.config/chex-explorer/`
 
-### Find & Replace
-1. Open `Edit > Find & Replace` or Ctrl+F
-2. Enter search and replacement text
-3. Use "Find Next", "Replace", or "Replace All"
+Configuration includes:
+- Window size and position
+- View preferences
+- Bookmarks
+- Recent locations
+- Theme settings
 
-## Configuration
+## 🎨 Themes and Customization
 
-Settings are automatically saved to:
-- **Windows**: `%APPDATA%\dnotepadx\settings.json`
-- **macOS**: `~/Library/Application Support/dnotepadx/settings.json`
-- **Linux**: `~/.config/dnotepadx/settings.json`
+ChexExplorer supports:
+- Dark and light themes
+- Customizable font sizes
+- Adjustable thumbnail sizes
+- Configurable keyboard shortcuts
 
-## Renaissance Theme Philosophy
+## 🚀 Performance
 
-DNotepadX embraces the elegance and sophistication of the Renaissance period through:
+Optimized for:
+- **Large directories** - Efficient loading and rendering
+- **File operations** - Progress tracking and cancellation
+- **Memory usage** - Minimal memory footprint
+- **Startup time** - Fast application launch
 
-- **Warm Color Palettes**: Inspired by aged parchment, rich woods, and gold illumination
-- **Classical Typography**: Emphasis on readable monospace fonts
-- **Elegant Interface**: Clean lines with subtle ornamental touches
-- **Timeless Design**: Balancing beauty with functionality
+## 🛡️ Safety Features
 
-## Contributing
+- **Trash support** - Files are moved to trash/recycle bin by default
+- **Confirmation dialogs** - For destructive operations
+- **Error handling** - Graceful error recovery
+- **Data integrity** - Safe file operations with rollback support
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+## 🤝 Contributing
 
-## License
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+### Development Workflow
 
-## Acknowledgments
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/new-feature`
+3. Make your changes and add tests
+4. Run tests: `cargo test`
+5. Submit a pull request
 
-- Built with [egui](https://github.com/emilk/egui) - an immediate mode GUI library
-- Inspired by classical text editors and renaissance aesthetics
-- Font rendering powered by Rust's excellent ecosystem
+### Code Style
 
+- Follow Rust standard formatting: `cargo fmt`
+- Run clippy for linting: `cargo clippy`
+- Ensure all tests pass: `cargo test`
 
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [egui](https://github.com/emilk/egui) - Excellent immediate mode GUI framework
+- [Rust community](https://www.rust-lang.org/community) - For the amazing ecosystem
+- File manager inspirations: Windows Explorer, macOS Finder, Nautilus
+
+## 📞 Support
+
+- **Issues**: Report bugs and request features on [GitHub Issues](https://github.com/your-username/chex-explorer/issues)
+- **Discussions**: Join conversations on [GitHub Discussions](https://github.com/your-username/chex-explorer/discussions)
+- **Documentation**: Check the [Wiki](https://github.com/your-username/chex-explorer/wiki) for detailed documentation
+
+## 🗺️ Roadmap
+
+### Upcoming Features
+- [ ] Plugin system for extensibility
+- [ ] Cloud storage integration (Google Drive, OneDrive, Dropbox)
+- [ ] Advanced file preview (PDF, video thumbnails)
+- [ ] Batch file operations
+- [ ] Network location support
+- [ ] File comparison tools
+- [ ] Advanced search with content indexing
+
+### Performance Improvements
+- [ ] Virtual scrolling for huge directories
+- [ ] Background thumbnail generation
+- [ ] Incremental search
+- [ ] Cached directory metadata
+
+---
+
+Built with ❤️ in Rust 🦀
